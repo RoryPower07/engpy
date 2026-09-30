@@ -1,7 +1,12 @@
-print('Hello, World!')
+# calculate the area of a cone
+import math
 
-number = 10
-number2 = 20
+def cone_area(radius, height):
+    slant_height = math.hypot(radius, height)
+    return math.pi * radius * (radius + slant_height)
 
-sum = number + number2
-print('The sum of', number, 'and', number2, 'is', sum)
+radius = float(input("Enter the radius of the cone: "))
+height = float(input("Enter the height of the cone: "))
+
+area = cone_area(radius, height)
+print(f"The area of the cone is: {area:.2f}")
